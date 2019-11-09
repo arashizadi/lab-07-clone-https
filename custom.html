@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+var yes = "yes";
+var no ="no";
+var answerOne = prompt("Do you want windows on your house?");
+var oneYes = answerOne.localeCompare(yes);
+var oneNo = answerOne.localeCompare(no);
+
+while (oneYes != 0 && oneNo != 0)
+{
+  answerOne = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you want windows on your house?");
+  oneYes = answerOne.localeCompare(yes);
+  oneNo = answerOne.localeCompare(no);
+}
+
+if (oneYes == 0 && oneNo != 0)
+{
+var window = true;
+}
+
+var answerTwo = prompt("Do you want a door on your house?");
+var twoYes = answerTwo.localeCompare(yes);
+var twoNo = answerTwo.localeCompare(no);
+
+while (twoYes != 0 && twoNo != 0)
+{
+  answerTwo = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you want a door on your house?");
+  twoYes = answerTwo.localeCompare(yes);
+  twoNo = answerTwo.localeCompare(no);
+}
+
+if (twoYes == 0 && twoNo != 0)
+{
+var door = true;
+}
+
+var answerThree = prompt("Do you want a door on your house?");
+var threeYes = answerThree.localeCompare(yes);
+var threeNo = answerThree.localeCompare(no);
+
+while (threeYes != 0 && threeNo != 0 )
+{
+  answerThree = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you a door on your house?");
+  threeYes = answerThree.localeCompare(yes);
+  threeNo = answerThree.localeCompare(no);
+}
+
+if (threeYes == 0 && threeNo != 0)
+{
+var chimney = true;
+}
+
+
+if (window == true && door == true && chimney == true)
+
+{
+      // d w c
+      console.log("      ||");
+      console.log("/\\ ||");
+      console.log("/  \\||");
+      console.log("/    ||");
+      console.log("/      \\");
+      console.log("/        \\");
+      console.log("|        |");
+      console.log("|  O  O  |");
+      console.log("|    _   |");
+      console.log("|   | |  |");
+      console.log("|   | |  |");
+}
+else if (window == true && door == true)
+{
+      //w d
+      console.log("      /\\");
+      console.log("     /  \\");
+      console.log("    /    \\");
+      console.log("   /      \\");
+      console.log("  /        \\");
+      console.log("  |        |");
+      console.log("  |  O  O  |");
+      console.log("  |    _   |");
+      console.log("  |   | |  |");
+      console.log("  |   | |  |");
+}
+else if (window == true && chimney == true)
+{
+      // w c
+      console.log("      ||");
+      console.log("/\\ ||");
+      console.log("/  \\||");
+      console.log("/    ||");
+      console.log("/      \\");
+      console.log("/        \\");
+      console.log("|        |");
+      console.log("|  O  O  |");
+      console.log("|        |");
+      console.log("|        |");
+      console.log("|        |");
+}
+else if (window == true)
+{
+      // w 
+      console.log("      /\\");
+      console.log("     /  \\");
+      console.log("    /    \\");
+      console.log("   /      \\");
+      console.log("  /        \\");
+      console.log("  |        |");
+      console.log("  |  O  O  |");
+      console.log("  |        |");
+      console.log("  |        |");
+      console.log("  |        |");
+}
+else if (door == true && chimney == true)
+{
+      // d c
+      console.log("      ||");
+      console.log("/\\ ||");
+      console.log("/  \\||");
+      console.log("/    ||");
+      console.log("/      \\");
+      console.log("/        \\");
+      console.log("|        |");
+      console.log("|        |");
+      console.log("|    _   |");
+      console.log("|   | |  |");
+      console.log("|   | |  |");
+}
+else if (door == true)
+{
+      // d
+      console.log("      /\\");
+      console.log("     /  \\");
+      console.log("    /    \\");
+      console.log("   /      \\");
+      console.log("  /        \\");
+      console.log("  |        |");
+      console.log("  |        |");
+      console.log("  |    _   |");
+      console.log("  |   | |  |");
+      console.log("  |   | |  |");
+}
+else if (chimney == true)
+{
+      // c
+      console.log("      ||");
+      console.log("/\\ ||");
+      console.log("/  \\||");
+      console.log("/    ||");
+      console.log("/      \\");
+      console.log("/        \\");
+      console.log("|        |");
+      console.log("|        |");
+      console.log("|        |");
+      console.log("|        |");
+      console.log("|        |");
+}
+
+else
+{
+
+      console.log("      /\\");
+      console.log("     /  \\");
+      console.log("    /    \\");
+      console.log("   /      \\");
+      console.log("  /        \\");
+      console.log("  |        |");
+      console.log("  |        |");
+      console.log("  |        |");
+      console.log("  |        |");
+      console.log("  |        |");
+}
+
+
+
+
+    </script>
+  </body>
+</html>
