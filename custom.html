@@ -14,14 +14,20 @@ var oneNo = answerOne.localeCompare(no);
 
 while (oneYes != 0 && oneNo != 0)
 {
-  answerOne = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you want windows on your house?");
+  answerOne = prompt("ERROR: TYPE 'yes' OR 'no'. Do you want windows on your house?");
   oneYes = answerOne.localeCompare(yes);
   oneNo = answerOne.localeCompare(no);
-}
 
-if (oneYes == 0 && oneNo != 0)
+}
+console.log("1 " + oneYes + ", " + oneNo);
+
+if (oneYes === 0)
 {
-var window = true;
+    var window = true;
+}
+else
+{
+    window = false;
 }
 
 var answerTwo = prompt("Do you want a door on your house?");
@@ -30,32 +36,41 @@ var twoNo = answerTwo.localeCompare(no);
 
 while (twoYes != 0 && twoNo != 0)
 {
-  answerTwo = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you want a door on your house?");
+  answerTwo = prompt("ERROR: TYPE 'yes' OR 'no'. Do you want a door on your house?");
   twoYes = answerTwo.localeCompare(yes);
   twoNo = answerTwo.localeCompare(no);
 }
+console.log("2 " + twoYes + ", " + twoNo);
 
-if (twoYes == 0 && twoNo != 0)
+if (twoYes == 0)
 {
 var door = true;
 }
-
-var answerThree = prompt("Do you want a door on your house?");
+else
+{
+door = false;
+}
+var answerThree = prompt("Do you want a chimney on your house?");
 var threeYes = answerThree.localeCompare(yes);
 var threeNo = answerThree.localeCompare(no);
 
 while (threeYes != 0 && threeNo != 0 )
 {
-  answerThree = prompt("ERROR: TYPE 'YES' OR 'NO'. Do you a door on your house?");
+  answerThree = prompt("ERROR: TYPE 'yes' OR 'no'. Do you a chimney on your house?");
   threeYes = answerThree.localeCompare(yes);
   threeNo = answerThree.localeCompare(no);
 }
+console.log("3 " + threeYes + ", " + threeNo);
 
-if (threeYes == 0 && threeNo != 0)
+if (threeYes === 0)
 {
 var chimney = true;
 }
-
+else
+{
+chimney = false;
+}
+console.log(window + " " + door + " " + chimney);
 
 if (window == true && door == true && chimney == true)
 
@@ -73,7 +88,7 @@ if (window == true && door == true && chimney == true)
       console.log("|   | |  |");
       console.log("|   | |  |");
 }
-else if (window == true && door == true)
+else if (window == true && door == true && chimney == false)
 {
       //w d
       console.log("      /\\");
@@ -87,7 +102,7 @@ else if (window == true && door == true)
       console.log("  |   | |  |");
       console.log("  |   | |  |");
 }
-else if (window == true && chimney == true)
+else if (window == true && door == false && chimney == true)
 {
       // w c
       console.log("      ||");
@@ -102,7 +117,7 @@ else if (window == true && chimney == true)
       console.log("|        |");
       console.log("|        |");
 }
-else if (window == true)
+else if (window == true && door == false && chimney == false)
 {
       // w 
       console.log("      /\\");
@@ -116,7 +131,7 @@ else if (window == true)
       console.log("  |        |");
       console.log("  |        |");
 }
-else if (door == true && chimney == true)
+else if (window == false && door == true && chimney == true)
 {
       // d c
       console.log("      ||");
@@ -131,7 +146,7 @@ else if (door == true && chimney == true)
       console.log("|   | |  |");
       console.log("|   | |  |");
 }
-else if (door == true)
+else if (window == false && door == true && chimney == false)
 {
       // d
       console.log("      /\\");
@@ -145,7 +160,7 @@ else if (door == true)
       console.log("  |   | |  |");
       console.log("  |   | |  |");
 }
-else if (chimney == true)
+else if (window == false && door == false && chimney == true)
 {
       // c
       console.log("      ||");
